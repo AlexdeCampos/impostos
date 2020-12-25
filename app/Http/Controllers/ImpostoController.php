@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 use App\Models\Imposto;
 use App\Models\Produto;
@@ -11,10 +10,6 @@ use Illuminate\Http\Response;
 class ImpostoController extends Controller
 {
     private $return = [];
-    public function index()
-    {
-        return view('impostos');
-    }
 
     public function getImpostos()
     {
@@ -25,8 +20,8 @@ class ImpostoController extends Controller
         }
 
         return \response()->json([
-            'data' =>  $this->return, //sample entry
-            'message' => 'Sucesso!!', //sample message
+            'data' =>  $this->return,
+            'message' => 'Sucesso!!',
         ], Response::HTTP_ACCEPTED);
     }
 
@@ -37,14 +32,14 @@ class ImpostoController extends Controller
         if ($imposto) {
             $imposto->delete();
             return \response()->json([
-                'data' =>  $this->return, //sample entry
-                'message' => 'Imposto deleteado com sucesso!!', //sample message
+                'data' =>  [],
+                'message' => 'Imposto deleteado com sucesso!!',
             ], Response::HTTP_ACCEPTED);
             
         } else {
             return \response()->json([
-                'data' => [], //sample entry
-                'message' => 'Imposto não encontrado!', //sample message
+                'data' => [],
+                'message' => 'Imposto não encontrado!',
             ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
@@ -69,26 +64,26 @@ class ImpostoController extends Controller
                     $imposto->save();
 
                     return \response()->json([
-                        'data' => $imposto, //sample entry
-                        'message' => 'Sucesso!', //sample message
+                        'data' => $imposto,
+                        'message' => 'Sucesso!',
                     ], Response::HTTP_ACCEPTED);
                 } else {
 
                     return \response()->json([
-                        'data' => [], //sample entry
-                        'message' => 'Produto inexistente!', //sample message
+                        'data' => [],
+                        'message' => 'Produto inexistente!',
                     ], Response::HTTP_INTERNAL_SERVER_ERROR);
                 }
             } else {
                 return \response()->json([
-                    'data' => [], //sample entry
-                    'message' => 'Já existe um imposto cadastrado para este produto e uf!', //sample message
+                    'data' => [],
+                    'message' => 'Já existe um imposto cadastrado para este produto e uf!',
                 ], Response::HTTP_INTERNAL_SERVER_ERROR);
             }
         } else {
             return \response()->json([
-                'data' => [], //sample entry
-                'message' => 'Dados obrigatórios não enviados!', //sample message
+                'data' => [],
+                'message' => 'Dados obrigatórios não enviados!',
             ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
@@ -113,32 +108,21 @@ class ImpostoController extends Controller
                 ];
 
                 return \response()->json([
-                    'data' =>  $this->return, //sample entry
-                    'message' => 'Sucesso!', //sample message
+                    'data' =>  $this->return,
+                    'message' => 'Sucesso!',
                 ], Response::HTTP_ACCEPTED);
             } else {
 
                 return \response()->json([
-                    'data' => [], //sample entry
-                    'message' => 'Imposto não cadastrado para produto e uf!', //sample message
+                    'data' => [],
+                    'message' => 'Imposto não cadastrado para produto e uf!',
                 ], Response::HTTP_INTERNAL_SERVER_ERROR);
             }
         } else {
             return \response()->json([
-                'data' => [], //sample entry
-                'message' => 'Dados obrigatórios não enviados!', //sample message
+                'data' => [],
+                'message' => 'Dados obrigatórios não enviados!',
             ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
-    }
-
-    //Retorna a sigla de todos os Estado existentes
-    public function getUF()
-    {
-        $estados = json_decode(Http::get('http://servicodados.ibge.gov.br/api/v1/localidades/estados/'));
-        foreach ($estados as $estado) {
-            $this->return[] = $estado->sigla;
-        }
-
-        return $this->return;
     }
 }

@@ -25,7 +25,6 @@
                 </option>
               </select>
             </div>
-
             <div class="form-group">
               <label class="form-label"> Percentual </label>
               <money
@@ -42,7 +41,6 @@
           </div>
         </formulario>
       </div>
-
       <!-- Simular impostos -->
       <div class="column col-md-6 col-sm-12">
         <formulario titulo="Simular Imposto" @formSubmit="submitSimularImposto">
@@ -89,17 +87,16 @@
                 </button>
               </div>
               <div class="column col-6 align-center">
-                Resultado: {{ dataSimulacao.valor_imposto }}
+                Resultado: {{ dataSimulacao.valor_imposto | currency }}
               </div>
             </div>
           </div>
         </formulario>
       </div>
     </div>
-    <impostos-table :list="impostoList" />
+    <impostos-table :list="impostoList" @delete="deletarImposto" />
   </div>
 </template>
-
 <script>
 import { mapState, mapActions } from "vuex";
 import { required } from "vuelidate/lib/validators";
@@ -107,6 +104,7 @@ import axios from "axios";
 import { VMoney } from "v-money";
 import ImpostosTable from "../components/ImpostosTable";
 import Formulario from "../components/Formulario";
+
 export default {
   data() {
     return {
@@ -164,7 +162,7 @@ export default {
         this.imposto = {
           uf: "",
           produto_id: null,
-          percentual: null,
+          percentual: 0,
         };
       } catch (error) {
         this.$toaster.error(this.impostoMessage);
@@ -228,14 +226,12 @@ export default {
 };
 </script>
 <style scoped>
-.container {
-  padding: 10px;
-}
+  .container {
+    padding: 10px;
+  }
 
-.align-center {
-  display: flex;
-  align-items: center;
-}
-
-
+  .align-center {
+    display: flex;
+    align-items: center;
+  }
 </style>

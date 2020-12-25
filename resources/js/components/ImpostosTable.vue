@@ -10,13 +10,13 @@
       <tbody>
         <tr v-for="imposto in list" :key="imposto.id">
           <td>{{ imposto.id }}</td>
-          <td>{{ imposto.uf }}</td>
+          <td>{{ imposto.uf|states }}</td>
           <td>{{ imposto.produto_id }}</td>
-          <td>{{ imposto.percentual }}</td>
+          <td>{{ imposto.percentual|percent }}</td>
           <td>
             <button
               type="button"
-              @click="deletarImposto(imposto.id)"
+              @click="$emit('delete',imposto.id)"
               class="btn btn-error"
             >
               Deletar
@@ -34,9 +34,6 @@ export default {
             required:true,
             type:Array
         }
-    },
-    created(){
-        console.log(this.list);
     }
 }
 </script>

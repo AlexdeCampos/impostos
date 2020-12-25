@@ -15,4 +15,4 @@ use Illuminate\Http\Request;
 |
 */
 Route::redirect('/impostos', '/');
-Route::get('/{any}', [ImpostoController::class, 'index'])->where('any','.*');
+Route::view("/{any}", 'impostos')->where('any', '.*');

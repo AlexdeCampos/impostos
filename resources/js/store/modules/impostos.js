@@ -20,7 +20,6 @@ const actions = {
     async deleteImposto({ commit }, id) {
         try {
             const { data } = await impostoService.deleteImposto(id)
-            console.log(data)
             commit('deleteImposto', id)
             commit('setMessage', data.message)
         } catch (error) {
