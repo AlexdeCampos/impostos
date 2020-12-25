@@ -5,7 +5,7 @@ const state = { impostoList: [], impostoMessage: "" }
 const actions = {
     async fetchListaImposto({ commit }) {
         const { data } = await impostoService.list()
-        commit('setImpostoList', data)
+        commit('setImpostoList', data.data)
 
     },
     async setImposto({ commit }, imposto) {

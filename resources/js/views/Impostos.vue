@@ -1,11 +1,13 @@
 <template>
-  <div class="container grid-lg">
+  <div class="container grid-lg" v-if="!loading">
     <div class="columns">
       <!-- Cadastro de impostos -->
       <div class="column col-md-6 col-sm-12">
-        <div class="form-container">
-          <h6>Cadastro de Impostos</h6>
-          <form @submit.prevent="submitNewImposto">
+        <formulario
+          titulo="Cadastro de Impostos"
+          @formSubmit="submitNewImposto"
+        >
+          <div slot="formulario-body">
             <div class="form-group">
               <label class="form-label"> Produto </label>
               <input
@@ -32,20 +34,19 @@
                 v-bind="percent"
               />
             </div>
-
+          </div>
+          <div slot="formulario-footer">
             <button :disabled="disabledImpostoForm" class="btn btn-primary">
               Incluir
             </button>
-          </form>
-        </div>
+          </div>
+        </formulario>
       </div>
 
       <!-- Simular impostos -->
       <div class="column col-md-6 col-sm-12">
-        <div class="form-container">
-          <h6>Simular Imposto</h6>
-
-          <form @submit.prevent="submitSimularImposto">
+        <formulario titulo="Simular Imposto" @formSubmit="submitSimularImposto">
+          <div slot="formulario-body">
             <div class="form-group">
               <label class="form-label"> Produto </label>
               <input
@@ -72,10 +73,12 @@
 
               <money
                 class="form-input"
-                v-model="$v.imposto.percentual.$model"
+                v-model="$v.simulacao.preco.$model"
                 v-bind="money"
               />
             </div>
+          </div>
+          <div slot="formulario-footer">
             <div class="columns">
               <div class="column col-6">
                 <button
@@ -89,36 +92,11 @@
                 Resultado: {{ dataSimulacao.valor_imposto }}
               </div>
             </div>
-          </form>
-        </div>
+          </div>
+        </formulario>
       </div>
     </div>
-    <table class="table table-striped table-hover">
-      <thead>
-        <th>Id</th>
-        <th>UF</th>
-        <th>Produto</th>
-        <th>Percentual</th>
-        <th></th>
-      </thead>
-      <tbody>
-        <tr v-for="imposto in impostoList" :key="imposto.id">
-          <td>{{ imposto.id }}</td>
-          <td>{{ imposto.uf }}</td>
-          <td>{{ imposto.produto_id }}</td>
-          <td>{{ imposto.percentual }}</td>
-          <td>
-            <button
-              type="button"
-              @click="deletarImposto(imposto.id)"
-              class="btn btn-error"
-            >
-              Deletar
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <impostos-table :list="impostoList" />
   </div>
 </template>
 
@@ -127,6 +105,8 @@ import { mapState, mapActions } from "vuex";
 import { required } from "vuelidate/lib/validators";
 import axios from "axios";
 import { VMoney } from "v-money";
+import ImpostosTable from "../components/ImpostosTable";
+import Formulario from "../components/Formulario";
 export default {
   data() {
     return {
@@ -139,7 +119,7 @@ export default {
       },
       simulacao: {
         produto_id: null,
-        preco: null,
+        preco: 0,
         uf: "",
       },
       money: {
@@ -215,6 +195,7 @@ export default {
   async created() {
     await this.fetchListaImposto();
     await this.getUf();
+    this.loading = false;
   },
   validations: {
     imposto: {
@@ -240,9 +221,12 @@ export default {
       },
     },
   },
+  components: {
+    ImpostosTable,
+    Formulario,
+  },
 };
 </script>
-
 <style scoped>
 .container {
   padding: 10px;
@@ -253,9 +237,5 @@ export default {
   align-items: center;
 }
 
-.form-container {
-  border: 1px solid #000;
-  padding: 10px;
-  margin-bottom: 10px;
-}
+
 </style>

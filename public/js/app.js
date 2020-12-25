@@ -1911,6 +1911,89 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Formulario.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Formulario.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    titulo: {
+      type: String,
+      required: true
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ImpostosTable.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ImpostosTable.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    list: {
+      required: true,
+      type: Array
+    }
+  },
+  created: function created() {
+    console.log(this.list);
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Impostos.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Impostos.vue?vue&type=script&lang=js& ***!
@@ -1929,6 +2012,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var v_money__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! v-money */ "./node_modules/v-money/dist/v-money.js");
 /* harmony import */ var v_money__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(v_money__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_ImpostosTable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ImpostosTable */ "./resources/js/components/ImpostosTable.vue");
+/* harmony import */ var _components_Formulario__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Formulario */ "./resources/js/components/Formulario.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -2043,28 +2128,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
 
 
 
@@ -2081,7 +2146,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       },
       simulacao: {
         produto_id: null,
-        preco: null,
+        preco: 0,
         uf: ""
       },
       money: {
@@ -2252,6 +2317,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
               return _this5.getUf();
 
             case 4:
+              _this5.loading = false;
+
+            case 5:
             case "end":
               return _context5.stop();
           }
@@ -2282,6 +2350,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["required"]
       }
     }
+  },
+  components: {
+    ImpostosTable: _components_ImpostosTable__WEBPACK_IMPORTED_MODULE_5__["default"],
+    Formulario: _components_Formulario__WEBPACK_IMPORTED_MODULE_6__["default"]
   }
 });
 
@@ -6753,6 +6825,25 @@ exports.push([module.i, ".v-toaster{position:fixed;top:50px;right:0;z-index:1000
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Formulario.vue?vue&type=style&index=0&id=c3f6ecc6&scoped=true&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Formulario.vue?vue&type=style&index=0&id=c3f6ecc6&scoped=true&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.footer[data-v-c3f6ecc6] {\r\n  margin-top: 5px;\n}\n.form-container[data-v-c3f6ecc6] {\r\n  border: 1px solid #000;\r\n  padding: 10px;\r\n  margin-bottom: 10px;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Impostos.vue?vue&type=style&index=0&id=688310c7&scoped=true&lang=css&":
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Impostos.vue?vue&type=style&index=0&id=688310c7&scoped=true&lang=css& ***!
@@ -6765,7 +6856,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.container[data-v-688310c7] {\r\n  padding: 10px;\n}\n.align-center[data-v-688310c7] {\r\n  display: flex;\r\n  align-items: center;\n}\n.form-container[data-v-688310c7] {\r\n  border: 1px solid #000;\r\n  padding: 10px;\r\n  margin-bottom: 10px;\n}\r\n", ""]);
+exports.push([module.i, "\n.container[data-v-688310c7] {\r\n  padding: 10px;\n}\n.align-center[data-v-688310c7] {\r\n  display: flex;\r\n  align-items: center;\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -38690,6 +38781,36 @@ try {
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Formulario.vue?vue&type=style&index=0&id=c3f6ecc6&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Formulario.vue?vue&type=style&index=0&id=c3f6ecc6&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Formulario.vue?vue&type=style&index=0&id=c3f6ecc6&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Formulario.vue?vue&type=style&index=0&id=c3f6ecc6&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Impostos.vue?vue&type=style&index=0&id=688310c7&scoped=true&lang=css&":
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Impostos.vue?vue&type=style&index=0&id=688310c7&scoped=true&lang=css& ***!
@@ -39356,6 +39477,125 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Formulario.vue?vue&type=template&id=c3f6ecc6&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Formulario.vue?vue&type=template&id=c3f6ecc6&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "form-container" }, [
+    _c("h6", [_vm._v(_vm._s(_vm.titulo))]),
+    _vm._v(" "),
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.$emit("formSubmit")
+          }
+        }
+      },
+      [
+        _vm._t("formulario-body"),
+        _vm._v(" "),
+        _c("div", { staticClass: "footer" }, [_vm._t("formulario-footer")], 2)
+      ],
+      2
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ImpostosTable.vue?vue&type=template&id=3f087cab&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ImpostosTable.vue?vue&type=template&id=3f087cab& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("table", { staticClass: "table table-striped table-hover" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "tbody",
+      _vm._l(_vm.list, function(imposto) {
+        return _c("tr", { key: imposto.id }, [
+          _c("td", [_vm._v(_vm._s(imposto.id))]),
+          _vm._v(" "),
+          _c("td", [_vm._v(_vm._s(imposto.uf))]),
+          _vm._v(" "),
+          _c("td", [_vm._v(_vm._s(imposto.produto_id))]),
+          _vm._v(" "),
+          _c("td", [_vm._v(_vm._s(imposto.percentual))]),
+          _vm._v(" "),
+          _c("td", [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-error",
+                attrs: { type: "button" },
+                on: {
+                  click: function($event) {
+                    return _vm.deletarImposto(imposto.id)
+                  }
+                }
+              },
+              [_vm._v("\n          Deletar\n        ")]
+            )
+          ])
+        ])
+      }),
+      0
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("th", [_vm._v("Id")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("UF")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Produto")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Percentual")]),
+      _vm._v(" "),
+      _c("th")
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=template&id=91ac6b5c&":
 /*!*************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/App.vue?vue&type=template&id=91ac6b5c& ***!
@@ -39395,369 +39635,387 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container grid-lg" }, [
-    _c("div", { staticClass: "columns" }, [
-      _c("div", { staticClass: "column col-md-6 col-sm-12" }, [
-        _c("div", { staticClass: "form-container" }, [
-          _c("h6", [_vm._v("Cadastro de Impostos")]),
-          _vm._v(" "),
-          _c(
-            "form",
-            {
-              on: {
-                submit: function($event) {
-                  $event.preventDefault()
-                  return _vm.submitNewImposto($event)
-                }
-              }
-            },
-            [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { staticClass: "form-label" }, [
-                  _vm._v(" Produto ")
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.$v.imposto.produto_id.$model,
-                      expression: "$v.imposto.produto_id.$model"
-                    }
-                  ],
-                  staticClass: "form-input",
-                  attrs: { type: "text" },
-                  domProps: { value: _vm.$v.imposto.produto_id.$model },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(
-                        _vm.$v.imposto.produto_id,
-                        "$model",
-                        $event.target.value
-                      )
-                    }
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { staticClass: "form-label" }, [_vm._v(" UF ")]),
-                _vm._v(" "),
+  return !_vm.loading
+    ? _c(
+        "div",
+        { staticClass: "container grid-lg" },
+        [
+          _c("div", { staticClass: "columns" }, [
+            _c(
+              "div",
+              { staticClass: "column col-md-6 col-sm-12" },
+              [
                 _c(
-                  "select",
+                  "formulario",
                   {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.$v.imposto.uf.$model,
-                        expression: "$v.imposto.uf.$model"
-                      }
-                    ],
-                    staticClass: "form-select",
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.$v.imposto.uf,
-                          "$model",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        )
-                      }
-                    }
+                    attrs: { titulo: "Cadastro de Impostos" },
+                    on: { formSubmit: _vm.submitNewImposto }
                   },
                   [
-                    _c("option", { domProps: { value: null } }),
-                    _vm._v(" "),
-                    _vm._l(_vm.ufs, function(uf) {
-                      return _c(
-                        "option",
-                        { key: uf.sigla, domProps: { value: uf.sigla } },
-                        [
-                          _vm._v(
-                            "\n                " +
-                              _vm._s(uf.nome) +
-                              "\n              "
-                          )
-                        ]
-                      )
-                    })
-                  ],
-                  2
-                )
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "form-group" },
-                [
-                  _c("label", { staticClass: "form-label" }, [
-                    _vm._v(" Percentual ")
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "money",
-                    _vm._b(
+                    _c(
+                      "div",
                       {
-                        staticClass: "form-input",
-                        model: {
-                          value: _vm.$v.imposto.percentual.$model,
-                          callback: function($$v) {
-                            _vm.$set(_vm.$v.imposto.percentual, "$model", $$v)
-                          },
-                          expression: "$v.imposto.percentual.$model"
-                        }
+                        attrs: { slot: "formulario-body" },
+                        slot: "formulario-body"
                       },
-                      "money",
-                      _vm.percent,
-                      false
-                    )
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-primary",
-                  attrs: { disabled: _vm.disabledImpostoForm }
-                },
-                [_vm._v("\n            Incluir\n          ")]
-              )
-            ]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "column col-md-6 col-sm-12" }, [
-        _c("div", { staticClass: "form-container" }, [
-          _c("h6", [_vm._v("Simular Imposto")]),
-          _vm._v(" "),
-          _c(
-            "form",
-            {
-              on: {
-                submit: function($event) {
-                  $event.preventDefault()
-                  return _vm.submitSimularImposto($event)
-                }
-              }
-            },
-            [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { staticClass: "form-label" }, [
-                  _vm._v(" Produto ")
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.$v.simulacao.produto_id.$model,
-                      expression: "$v.simulacao.produto_id.$model"
-                    }
-                  ],
-                  staticClass: "form-input",
-                  attrs: { type: "text" },
-                  domProps: { value: _vm.$v.simulacao.produto_id.$model },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(
-                        _vm.$v.simulacao.produto_id,
-                        "$model",
-                        $event.target.value
-                      )
-                    }
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { staticClass: "form-label" }, [_vm._v(" UF ")]),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.$v.simulacao.uf.$model,
-                        expression: "$v.simulacao.uf.$model"
-                      }
-                    ],
-                    staticClass: "form-select",
-                    attrs: { name: "uf" },
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
+                      [
+                        _c("div", { staticClass: "form-group" }, [
+                          _c("label", { staticClass: "form-label" }, [
+                            _vm._v(" Produto ")
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.$v.imposto.produto_id.$model,
+                                expression: "$v.imposto.produto_id.$model"
+                              }
+                            ],
+                            staticClass: "form-input",
+                            attrs: { type: "text" },
+                            domProps: {
+                              value: _vm.$v.imposto.produto_id.$model
+                            },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.$v.imposto.produto_id,
+                                  "$model",
+                                  $event.target.value
+                                )
+                              }
+                            }
                           })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.$v.simulacao.uf,
-                          "$model",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group" }, [
+                          _c("label", { staticClass: "form-label" }, [
+                            _vm._v(" UF ")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "select",
+                            {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.$v.imposto.uf.$model,
+                                  expression: "$v.imposto.uf.$model"
+                                }
+                              ],
+                              staticClass: "form-select",
+                              on: {
+                                change: function($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function(o) {
+                                      return o.selected
+                                    })
+                                    .map(function(o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.$set(
+                                    _vm.$v.imposto.uf,
+                                    "$model",
+                                    $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  )
+                                }
+                              }
+                            },
+                            [
+                              _c("option", { domProps: { value: null } }),
+                              _vm._v(" "),
+                              _vm._l(_vm.ufs, function(uf) {
+                                return _c(
+                                  "option",
+                                  {
+                                    key: uf.sigla,
+                                    domProps: { value: uf.sigla }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                " +
+                                        _vm._s(uf.nome) +
+                                        "\n              "
+                                    )
+                                  ]
+                                )
+                              })
+                            ],
+                            2
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "form-group" },
+                          [
+                            _c("label", { staticClass: "form-label" }, [
+                              _vm._v(" Percentual ")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "money",
+                              _vm._b(
+                                {
+                                  staticClass: "form-input",
+                                  model: {
+                                    value: _vm.$v.imposto.percentual.$model,
+                                    callback: function($$v) {
+                                      _vm.$set(
+                                        _vm.$v.imposto.percentual,
+                                        "$model",
+                                        $$v
+                                      )
+                                    },
+                                    expression: "$v.imposto.percentual.$model"
+                                  }
+                                },
+                                "money",
+                                _vm.percent,
+                                false
+                              )
+                            )
+                          ],
+                          1
                         )
-                      }
-                    }
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        attrs: { slot: "formulario-footer" },
+                        slot: "formulario-footer"
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-primary",
+                            attrs: { disabled: _vm.disabledImpostoForm }
+                          },
+                          [_vm._v("\n            Incluir\n          ")]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "column col-md-6 col-sm-12" },
+              [
+                _c(
+                  "formulario",
+                  {
+                    attrs: { titulo: "Simular Imposto" },
+                    on: { formSubmit: _vm.submitSimularImposto }
                   },
                   [
-                    _c("option", { domProps: { value: null } }),
-                    _vm._v(" "),
-                    _vm._l(_vm.ufs, function(uf) {
-                      return _c(
-                        "option",
-                        { key: uf.sigla, domProps: { value: uf.sigla } },
-                        [
-                          _vm._v(
-                            "\n                " +
-                              _vm._s(uf.nome) +
-                              "\n              "
-                          )
-                        ]
-                      )
-                    })
-                  ],
-                  2
-                )
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "form-group" },
-                [
-                  _c("label", { staticClass: "form-label" }, [
-                    _vm._v(" Preço ")
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "money",
-                    _vm._b(
+                    _c(
+                      "div",
                       {
-                        staticClass: "form-input",
-                        model: {
-                          value: _vm.$v.imposto.percentual.$model,
-                          callback: function($$v) {
-                            _vm.$set(_vm.$v.imposto.percentual, "$model", $$v)
-                          },
-                          expression: "$v.imposto.percentual.$model"
-                        }
+                        attrs: { slot: "formulario-body" },
+                        slot: "formulario-body"
                       },
-                      "money",
-                      _vm.money,
-                      false
+                      [
+                        _c("div", { staticClass: "form-group" }, [
+                          _c("label", { staticClass: "form-label" }, [
+                            _vm._v(" Produto ")
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.$v.simulacao.produto_id.$model,
+                                expression: "$v.simulacao.produto_id.$model"
+                              }
+                            ],
+                            staticClass: "form-input",
+                            attrs: { type: "text" },
+                            domProps: {
+                              value: _vm.$v.simulacao.produto_id.$model
+                            },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.$v.simulacao.produto_id,
+                                  "$model",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group" }, [
+                          _c("label", { staticClass: "form-label" }, [
+                            _vm._v(" UF ")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "select",
+                            {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.$v.simulacao.uf.$model,
+                                  expression: "$v.simulacao.uf.$model"
+                                }
+                              ],
+                              staticClass: "form-select",
+                              attrs: { name: "uf" },
+                              on: {
+                                change: function($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function(o) {
+                                      return o.selected
+                                    })
+                                    .map(function(o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.$set(
+                                    _vm.$v.simulacao.uf,
+                                    "$model",
+                                    $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  )
+                                }
+                              }
+                            },
+                            [
+                              _c("option", { domProps: { value: null } }),
+                              _vm._v(" "),
+                              _vm._l(_vm.ufs, function(uf) {
+                                return _c(
+                                  "option",
+                                  {
+                                    key: uf.sigla,
+                                    domProps: { value: uf.sigla }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                " +
+                                        _vm._s(uf.nome) +
+                                        "\n              "
+                                    )
+                                  ]
+                                )
+                              })
+                            ],
+                            2
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "form-group" },
+                          [
+                            _c("label", { staticClass: "form-label" }, [
+                              _vm._v(" Preço ")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "money",
+                              _vm._b(
+                                {
+                                  staticClass: "form-input",
+                                  model: {
+                                    value: _vm.$v.simulacao.preco.$model,
+                                    callback: function($$v) {
+                                      _vm.$set(
+                                        _vm.$v.simulacao.preco,
+                                        "$model",
+                                        $$v
+                                      )
+                                    },
+                                    expression: "$v.simulacao.preco.$model"
+                                  }
+                                },
+                                "money",
+                                _vm.money,
+                                false
+                              )
+                            )
+                          ],
+                          1
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        attrs: { slot: "formulario-footer" },
+                        slot: "formulario-footer"
+                      },
+                      [
+                        _c("div", { staticClass: "columns" }, [
+                          _c("div", { staticClass: "column col-6" }, [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary",
+                                attrs: { disabled: _vm.disabledSimulacaoForm }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                Simular\n              "
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "column col-6 align-center" },
+                            [
+                              _vm._v(
+                                "\n              Resultado: " +
+                                  _vm._s(_vm.dataSimulacao.valor_imposto) +
+                                  "\n            "
+                              )
+                            ]
+                          )
+                        ])
+                      ]
                     )
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "columns" }, [
-                _c("div", { staticClass: "column col-6" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-primary",
-                      attrs: { disabled: _vm.disabledSimulacaoForm }
-                    },
-                    [_vm._v("\n                Simular\n              ")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "column col-6 align-center" }, [
-                  _vm._v(
-                    "\n              Resultado: " +
-                      _vm._s(_vm.dataSimulacao.valor_imposto) +
-                      "\n            "
-                  )
-                ])
-              ])
-            ]
-          )
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c("table", { staticClass: "table table-striped table-hover" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c(
-        "tbody",
-        _vm._l(_vm.impostoList, function(imposto) {
-          return _c("tr", { key: imposto.id }, [
-            _c("td", [_vm._v(_vm._s(imposto.id))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(imposto.uf))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(imposto.produto_id))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(imposto.percentual))]),
-            _vm._v(" "),
-            _c("td", [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-error",
-                  attrs: { type: "button" },
-                  on: {
-                    click: function($event) {
-                      return _vm.deletarImposto(imposto.id)
-                    }
-                  }
-                },
-                [_vm._v("\n            Deletar\n          ")]
-              )
-            ])
-          ])
-        }),
-        0
+                  ]
+                )
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c("impostos-table", { attrs: { list: _vm.impostoList } })
+        ],
+        1
       )
-    ])
-  ])
+    : _vm._e()
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("th", [_vm._v("Id")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("UF")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Produto")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Percentual")]),
-      _vm._v(" "),
-      _c("th")
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -58363,6 +58621,162 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/components/Formulario.vue":
+/*!************************************************!*\
+  !*** ./resources/js/components/Formulario.vue ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Formulario_vue_vue_type_template_id_c3f6ecc6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Formulario.vue?vue&type=template&id=c3f6ecc6&scoped=true& */ "./resources/js/components/Formulario.vue?vue&type=template&id=c3f6ecc6&scoped=true&");
+/* harmony import */ var _Formulario_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Formulario.vue?vue&type=script&lang=js& */ "./resources/js/components/Formulario.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Formulario_vue_vue_type_style_index_0_id_c3f6ecc6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Formulario.vue?vue&type=style&index=0&id=c3f6ecc6&scoped=true&lang=css& */ "./resources/js/components/Formulario.vue?vue&type=style&index=0&id=c3f6ecc6&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Formulario_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Formulario_vue_vue_type_template_id_c3f6ecc6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Formulario_vue_vue_type_template_id_c3f6ecc6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "c3f6ecc6",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Formulario.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Formulario.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/Formulario.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Formulario_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Formulario.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Formulario.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Formulario_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Formulario.vue?vue&type=style&index=0&id=c3f6ecc6&scoped=true&lang=css&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/components/Formulario.vue?vue&type=style&index=0&id=c3f6ecc6&scoped=true&lang=css& ***!
+  \*********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Formulario_vue_vue_type_style_index_0_id_c3f6ecc6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Formulario.vue?vue&type=style&index=0&id=c3f6ecc6&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Formulario.vue?vue&type=style&index=0&id=c3f6ecc6&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Formulario_vue_vue_type_style_index_0_id_c3f6ecc6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Formulario_vue_vue_type_style_index_0_id_c3f6ecc6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Formulario_vue_vue_type_style_index_0_id_c3f6ecc6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Formulario_vue_vue_type_style_index_0_id_c3f6ecc6_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Formulario.vue?vue&type=template&id=c3f6ecc6&scoped=true&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/Formulario.vue?vue&type=template&id=c3f6ecc6&scoped=true& ***!
+  \*******************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Formulario_vue_vue_type_template_id_c3f6ecc6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Formulario.vue?vue&type=template&id=c3f6ecc6&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Formulario.vue?vue&type=template&id=c3f6ecc6&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Formulario_vue_vue_type_template_id_c3f6ecc6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Formulario_vue_vue_type_template_id_c3f6ecc6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/ImpostosTable.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/components/ImpostosTable.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ImpostosTable_vue_vue_type_template_id_3f087cab___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ImpostosTable.vue?vue&type=template&id=3f087cab& */ "./resources/js/components/ImpostosTable.vue?vue&type=template&id=3f087cab&");
+/* harmony import */ var _ImpostosTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ImpostosTable.vue?vue&type=script&lang=js& */ "./resources/js/components/ImpostosTable.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ImpostosTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ImpostosTable_vue_vue_type_template_id_3f087cab___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ImpostosTable_vue_vue_type_template_id_3f087cab___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/ImpostosTable.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/ImpostosTable.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/ImpostosTable.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ImpostosTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ImpostosTable.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ImpostosTable.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ImpostosTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/ImpostosTable.vue?vue&type=template&id=3f087cab&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/ImpostosTable.vue?vue&type=template&id=3f087cab& ***!
+  \**********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ImpostosTable_vue_vue_type_template_id_3f087cab___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ImpostosTable.vue?vue&type=template&id=3f087cab& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ImpostosTable.vue?vue&type=template&id=3f087cab&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ImpostosTable_vue_vue_type_template_id_3f087cab___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ImpostosTable_vue_vue_type_template_id_3f087cab___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/routes/index.js":
 /*!**************************************!*\
   !*** ./resources/js/routes/index.js ***!
@@ -58510,7 +58924,7 @@ var actions = {
             case 3:
               _yield$impostoService = _context.sent;
               data = _yield$impostoService.data;
-              commit('setImpostoList', data);
+              commit('setImpostoList', data.data);
 
             case 6:
             case "end":
