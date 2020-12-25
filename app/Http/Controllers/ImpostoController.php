@@ -40,6 +40,7 @@ class ImpostoController extends Controller
                 'data' =>  $this->return, //sample entry
                 'message' => 'Imposto deleteado com sucesso!!', //sample message
             ], Response::HTTP_ACCEPTED);
+            
         } else {
             return \response()->json([
                 'data' => [], //sample entry
