@@ -6,17 +6,14 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 use App\Models\Imposto;
 use App\Models\Produto;
+use Illuminate\Http\Response;
 
 class ImpostoController extends Controller
 {
     private $return = [];
     public function index()
     {
-        $data = [
-            "estados" => $this->getUF()
-        ];
-
-        return view('impostos', $data);
+        return view('impostos');
     }
 
     public function getImpostos()
@@ -26,7 +23,11 @@ class ImpostoController extends Controller
         foreach ($impostos as $imposto) {
             $this->return[] = $imposto;
         }
-        return $this->return;
+
+        return \response()->json([
+            'data' =>  $this->return, //sample entry
+            'message' => 'Sucesso!!', //sample message
+        ], Response::HTTP_ACCEPTED);
     }
 
     public function deleteImposto($id)
@@ -35,12 +36,16 @@ class ImpostoController extends Controller
 
         if ($imposto) {
             $imposto->delete();
-            $this->return = "Imposto deleteado com sucesso!";
+            return \response()->json([
+                'data' =>  $this->return, //sample entry
+                'message' => 'Imposto deleteado com sucesso!!', //sample message
+            ], Response::HTTP_ACCEPTED);
         } else {
-            $this->return = "Imposto não encontrado!";
+            return \response()->json([
+                'data' => [], //sample entry
+                'message' => 'Imposto não encontrado!', //sample message
+            ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
-
-        return $this->return;
     }
 
     public function setImposto(Request $request)
@@ -61,17 +66,30 @@ class ImpostoController extends Controller
                     $imposto->produto_id = $idProduto;
                     $imposto->percentual = $percentual;
                     $imposto->save();
-                    $this->return = "Sucesso!";
+
+                    return \response()->json([
+                        'data' => $imposto, //sample entry
+                        'message' => 'Sucesso!', //sample message
+                    ], Response::HTTP_ACCEPTED);
                 } else {
-                    $this->return = "Produto inexistente!";
+
+                    return \response()->json([
+                        'data' => [], //sample entry
+                        'message' => 'Produto inexistente!', //sample message
+                    ], Response::HTTP_INTERNAL_SERVER_ERROR);
                 }
             } else {
-                $this->return = "Já existe um imposto cadastrado para este produto e uf!";
+                return \response()->json([
+                    'data' => [], //sample entry
+                    'message' => 'Já existe um imposto cadastrado para este produto e uf!', //sample message
+                ], Response::HTTP_INTERNAL_SERVER_ERROR);
             }
         } else {
-            $this->return = "Dados obrigatórios não enviados!";
+            return \response()->json([
+                'data' => [], //sample entry
+                'message' => 'Dados obrigatórios não enviados!', //sample message
+            ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
-        return $this->return;
     }
 
     public function getCalculoimposto(Request $request)
@@ -82,7 +100,7 @@ class ImpostoController extends Controller
 
         if ($produto_id && $preco && $uf) {
             $imposto = Imposto::where('produto_id', $produto_id)->where('uf', $uf)->first();
-            if ($imposto->count() > 0) {
+            if ($imposto) {
                 $percentual = (float) $imposto->percentual;
                 $valor_imposto = ($preco / 100) *  $percentual;
 
@@ -92,19 +110,31 @@ class ImpostoController extends Controller
                     "preco" => $preco,
                     "valor_imposto" => $valor_imposto
                 ];
+
+                return \response()->json([
+                    'data' =>  $this->return, //sample entry
+                    'message' => 'Sucesso!', //sample message
+                ], Response::HTTP_ACCEPTED);
             } else {
-                $this->return = "Imposto não cadastrado para produto e uf!";
+
+                return \response()->json([
+                    'data' => [], //sample entry
+                    'message' => 'Imposto não cadastrado para produto e uf!', //sample message
+                ], Response::HTTP_INTERNAL_SERVER_ERROR);
             }
         } else {
-            $this->return = "Dados obrigatórios não enviados!";
+            return \response()->json([
+                'data' => [], //sample entry
+                'message' => 'Dados obrigatórios não enviados!', //sample message
+            ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
-        return $this->return;
     }
 
     //Retorna a sigla de todos os Estado existentes
-    public function getUF(){
-         $estados = json_decode(Http::get('http://servicodados.ibge.gov.br/api/v1/localidades/estados/'));
-        foreach ($estados as $estado){
+    public function getUF()
+    {
+        $estados = json_decode(Http::get('http://servicodados.ibge.gov.br/api/v1/localidades/estados/'));
+        foreach ($estados as $estado) {
             $this->return[] = $estado->sigla;
         }
 

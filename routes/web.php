@@ -14,10 +14,5 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::redirect('/', 'impostos');
-Route::get('impostos', [ImpostoController::class, 'index']);
-
-Route::Fallback(function () {
-    return view('404');
-});
+Route::redirect('/impostos', '/');
+Route::get('/{any}', [ImpostoController::class, 'index'])->where('any','.*');
