@@ -33,7 +33,7 @@ class ImpostoController extends Controller
             $imposto->delete();
             return \response()->json([
                 'data' =>  [],
-                'message' => 'Imposto deleteado com sucesso!!',
+                'message' => 'Imposto deletado com sucesso!!',
             ], Response::HTTP_ACCEPTED);
             
         } else {
