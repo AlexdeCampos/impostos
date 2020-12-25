@@ -3,11 +3,12 @@
 ## Requisitos mínimos:
 - PHP versão 7.4.0 
 - Node.js versão 10.16.3
-- Npm versão 6.9.0
+- Npm versão 6.9.0 
+- Banco de dados Mysql/MariaDb
 ## Instruções de uso:
 
 - Faça o clone do repositório;
-- Importe para seu bando de dados o arquivo `impostobd.sql` localizado na raiz do projeto;
+- Importe para seu bando de dados o arquivo `impostodb.sql` localizado na raiz do projeto;
 - Abra o seu terminal na raiz do projeto e execute a sequência de comandos a seguir:
 ```sh
 $ npm install
